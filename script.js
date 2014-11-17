@@ -1,1 +1,3 @@
-var foo = "7" + 6 + 5; // 97
+var foo = parseInt('3.14', 10); // 34
+
+var bar = parseFloat('3.14', 10); // 34
