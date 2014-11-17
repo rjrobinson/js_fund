@@ -1,1 +1,1 @@
-var foo = "Hello, " + "World!"; // 'Hello, World!'
+var foo = "7" + 6 + 5; // 97
