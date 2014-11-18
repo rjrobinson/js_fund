@@ -1,22 +1,16 @@
-function doSomething(paramOne, paramTwo, fn) {
-  paramOne = paramOne + 3;
-  paramOne = paramOne + 1;
-  paramOne = paramOne * 8;
+var globalVar = 'This is a global variable.';
 
-  return fn(paramOne, paramTwo);
+var globalFunction = function(paramOne) {
+  var localVar = 'This is a local variable.';
+
+  var localFunction = function() {
+    var localVar = 'hello, world!';
+
+    alert(localVar);
+  };
+
+  localFunction();
+  alert(localVar);
 };
 
-function sum(paramOne, paramTwo) {
-  return paramOne + paramTwo;
-}
-
-function product(paramOne, paramTwo) {
-  return paramOne * paramTwo;
-}
-
-var foo = doSomething(2, 2, sum); // 96
-var bar = doSomething(3, 2, product); // 112
-
-
-alert(foo);
-alert(bar);
+globalFunction(2);
