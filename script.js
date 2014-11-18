@@ -4,14 +4,13 @@ var globalFunction = function(paramOne) {
   var localVar = 'This is a local variable.';
 
   var localFunction = function() {
-    var superLocalVar = 'Hello World!';
-    alert(superLocalVar);
+    var localVar = 'hello, world!';
+
     alert(localVar);
-    alert(paramOne);
-    alert(globalVar);
   };
 
   localFunction();
+  alert(localVar);
 };
 
 globalFunction(2);
