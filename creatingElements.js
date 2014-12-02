@@ -7,7 +7,7 @@
     ),
     pFoo = doc.getElementById("foo");
 
-  el.innerHTML = "<strong> This has been STRONG </strong>";
+  el.appendChild(content);
   el.id = "bar";
 
   pFoo.parentNode.replaceChild(el, pFoo)
