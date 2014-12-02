@@ -1,8 +1,7 @@
-var foo = "hello",
-  bar = 5;
-// logicall AND &&
-if (foo = 'hello' || bar < 6) {
-  alert('True');
-};
+var names = ['Jeremy', 'rj', 'lex']
 
-alert('This is outside the statement')
+for (var i = 0, len = names.length; i < len; i = i + 1) {
+  var name = names[i]
+
+  alert(name);
+}
