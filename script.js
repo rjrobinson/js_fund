@@ -1,13 +1,8 @@
 (function() {
 
-  var foo = 'hello, window';
 
-  var bar = function() {
-    var foo = 'Hello, Function';
+  var pElement = document.querySelector("#foo");
 
-    alert(foo)
-  };
-
-  bar();
+  alert(pElement.parentNode.tagName);
 
 }());
