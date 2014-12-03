@@ -1,19 +1,12 @@
 (function() {
 
-  var doc = document,
-    el = doc.createElement("p"),
-    content = doc.createTextNode(
-      "<strong> This was dynamically created </strong>"
-    ),
-    pFoo = doc.getElementById("foo");
+  var divFoo = document.getElementById("foo"),
+    style = divFoo.style
 
-  el.innerHTML = "<strong> This has been STRONG </strong>";
-  el.id = "bar";
-
-  pFoo.parentNode.replaceChild(el, pFoo)
-
-
-  // doc.body.appendChild(el);
+  style.color = 'blue';
+  style.border = "1px solid black";
+  style.backgroundColor = '#ffff00';
+  style.padding = "2px";
 
 
 }());
