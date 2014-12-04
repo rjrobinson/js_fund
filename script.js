@@ -1,12 +1,14 @@
 (function() {
 
   var divFoo = document.getElementById("foo"),
-    style = divFoo.style
+    style = divFoo.style;
 
-  divFoo.classList.add("css-class").add('css-class2')
 
-  divFoo.classList.remove('css-class')
+  divFoo.className = 'css-class css-class2';
 
+  var color = window.getComputedStyle(divFoo, null).getPropertyValue("color");
+
+  alert(color);
 
   // alert(style.color);
 
