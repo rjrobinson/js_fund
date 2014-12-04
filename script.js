@@ -1,15 +1,23 @@
 (function() {
 
-  var divFoo = document.getElementById("foo"),
-    style = divFoo.style;
+  var speed = 10,
+    moveBox = function(moveBy) {
 
+      var el = document.getElementById('box'),
+        left = el.offsetLeft;
 
-  divFoo.className = 'css-class css-class2';
+      if ((moveBy > 0 && left > 399) || (moveBy < 0 && left < 51)) {
+        clearTimeout(timer);
+        timer = setInterval(function() {
+          moveBox(moveBy * -1)
+        }, speed);
+      };
 
-  var color = window.getComputedStyle(divFoo, null).getPropertyValue("color");
+      el.style.left = left + moveBy + 'px';
+    };
 
-  alert(color);
+  var timer = setInterval(function() {
+    moveBox(3)
+  }, speed);
 
-  // alert(style.color);
-
-}());
+}()); // main function
