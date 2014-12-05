@@ -7,25 +7,32 @@
 
     <style media="screen">
       .normal {
-        background-color: white;
+        background-color: gray;
         color: black
       }
       .changed {
         background-color: black;
         color: white;
       }
+      .changed-2 {
+        background-color: blue;
+        color: yellow;
+      }
+
     </style>
 
   </head>
-  <body class='normal'>
+  <body>
     <h1>Hello Events!</h1>
     <p>la de da!</p>
 
-    <a href="http://www.google.com">Normal</a>
-    <a href="http://www.google.com">Changed</a>
-
+    <a href="http://www.google.com">go to google</a>
+    <a data-body-class='normal' href="#">Change to Nromal</a>
+    <a data-body-class='changed' href="#">Changed to changed</a>
+    <button data-body-class='changed-2' name="changed-2">Change 2</button>
+    <button name="normal">Normal</button>
     <script src='eventUtility.js'></script>
-    <script src='script.js'></script> 
+    <script src='script.js'></script>
   </body>
 
 </html>
