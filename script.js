@@ -1,43 +1,11 @@
-(function() {
+function toThePower(num, exp) {
+  var value = num;
+  for (var i = 0; i < exp; i++) {
+    value = value * num;
+  }
+  return value;
+}
 
-  var mouseHandler = function(evt) {
-    var target = eventUtility.getTarget(evt),
-      classData = target.getAttribute("data-body-class")
+var answer = toThePower(2, 3)
 
-    if (classData) {
-      eventUtility.preventDefault(evt);
-
-      if (evt.type === "click") {
-
-        document.body.className = "";
-
-      } else {
-        document.body.className = classData;
-      }
-    }
-  };
-
-
-  eventUtility.addEvent(document, "click", mouseHandler);
-  eventUtility.addEvent(document, "mouseover", mouseHandler);
-
-
-
-  // var buttons = document.getElementsByTagName('a');
-  //
-  // var buttonClick = function(evt) {
-  //   var target = eventUtility.getTarget(evt),
-  //     className = target.innerHTML.toLowerCase();
-  //
-  //   eventUtility.preventDefault(evt);
-  //
-  //   document.body.className = className;
-  // };
-  //
-  // for (var i = 0, len = buttons.length; i < len; i++) {
-  //   eventUtility.addEvent(buttons[i], "click", buttonClick);
-  //   //removeEvent(buttons[i], "click", buttonClick);
-  //
-  // }
-
-}());
+alert(answer)
