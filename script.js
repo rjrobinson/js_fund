@@ -1,24 +1,25 @@
 (function() {
 
-  eventUtility.addEvent(document, "click", function(evt) {
+  var mouseHandler = function(evt) {
     var target = eventUtility.getTarget(evt),
       classData = target.getAttribute("data-body-class")
 
     if (classData) {
       eventUtility.preventDefault(evt);
-      document.body.className = classData;
-    }
-  });
 
-  eventUtility.addEvent(document, "mouseover", function(evt) {
-    var target = eventUtility.getTarget(evt),
-      classData = target.getAttribute("data-body-class")
+      if (evt.type === "click") {
 
-    if (classData) {
-      eventUtility.preventDefault(evt);
-      document.body.className = classData;
+        document.body.className = "";
+
+      } else {
+        document.body.className = classData;
+      }
     }
-  });
+  };
+
+
+  eventUtility.addEvent(document, "click", mouseHandler);
+  eventUtility.addEvent(document, "mouseover", mouseHandler);
 
 
 
