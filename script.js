@@ -1,23 +1,13 @@
 (function() {
 
-  var speed = 10,
-    moveBox = function(moveBy) {
+  var buttons = document.getElementsByTagName("button");
 
-      var el = document.getElementById('box'),
-        left = el.offsetLeft;
+  for (var i = 0, len = buttons.length; i < len; i++) {
+    buttons[i].onclick = function() {
+      var className = this.innerHTML.toLowerCase();
 
-      if ((moveBy > 0 && left > 399) || (moveBy < 0 && left < 51)) {
-        clearTimeout(timer);
-        timer = setInterval(function() {
-          moveBox(moveBy * -1)
-        }, speed);
-      };
-
-      el.style.left = left + moveBy + 'px';
+      document.body.className = className;
     };
-
-  var timer = setInterval(function() {
-    moveBox(3)
-  }, speed);
+  }
 
 }()); // main function

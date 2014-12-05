@@ -6,20 +6,23 @@
     <title>TustPlus JS Fundamentals </title>
 
     <style media="screen">
-      #box {
-        background-color: blue;
-        height: 100px;
-        left: 50px;
-        position: absolute;
-        top: 50px;
-        width: 100px;
+      .normal {
+        background-color: white;
+        color: black
+      }
+      .changed {
+        background-color: black;
+        color: white;
       }
     </style>
 
   </head>
-  <body>
+  <body class='normal'>
+    <h1>Hello Events!</h1>
+    <p>la de da!</p>
 
-    <div id='box'></div>
+    <button name="normal">Normal</button>
+    <button name="changed">Changed</button>
     <script src='script.js'></script>
   </body>
 </html>
